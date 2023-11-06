@@ -14003,6 +14003,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 21.4
+  originalMaterial: {fileID: 2100000, guid: 82856318ac4c8457e9567f6eaee7e554, type: 2}
+  badMaterial: {fileID: 2100000, guid: 640fc324429444cf88e7c3ffeb994dea, type: 2}
 --- !u!4 &1379652580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1149563185166043940, guid: b9b91ecef02794ba1881251d8f1bd4bb, type: 3}
@@ -15656,6 +15658,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 360834757}
     m_Modifications:
+    - target: {fileID: 1113094512244915358, guid: b9b91ecef02794ba1881251d8f1bd4bb, type: 3}
+      propertyPath: m_Name
+      value: Coin-bad
+      objectReference: {fileID: 0}
     - target: {fileID: 1149563185166043940, guid: b9b91ecef02794ba1881251d8f1bd4bb, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -15704,6 +15710,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinSet_31
       objectReference: {fileID: 0}
+    - target: {fileID: 1955127023462408173, guid: b9b91ecef02794ba1881251d8f1bd4bb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3002894376871603546, guid: b9b91ecef02794ba1881251d8f1bd4bb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 640fc324429444cf88e7c3ffeb994dea, type: 2}
     - target: {fileID: 6214214208577384829, guid: b9b91ecef02794ba1881251d8f1bd4bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.0300004
