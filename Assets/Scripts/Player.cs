@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [Range(1f, 40f)]
     public float speed = 10.0f;
 
+    int goodCounter = 0;
     int badCounter = 0;
 
     [SerializeField] Material originalMaterial;
@@ -34,9 +35,20 @@ public class Player : MonoBehaviour
 
             movement *= -1;
         }
-        else
+        else if (meshRenderer.material != originalMaterial)
         {
             meshRenderer.material = originalMaterial;
+        }
+
+        if (goodCounter >= 0)
+        {
+            goodCounter -= 1;
+
+            transform.localScale = Vector3.one * 2.0f;
+        }
+        else if (transform.localScale != Vector3.one)
+        {
+            transform.localScale = Vector3.one;
         }
 
         //Rigidbodyコンポーネントを取得する
@@ -53,6 +65,11 @@ public class Player : MonoBehaviour
             badCounter = 100;
 
             meshRenderer.material = badMaterial;
+        }
+
+        if (other.name.Contains("good"))
+        {
+            goodCounter = 100;
         }
     }
 }
