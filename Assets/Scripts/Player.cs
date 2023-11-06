@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
     [Range(1f, 40f)]
     public float speed = 10.0f;
 
-    int goodCounter = 0;
-    int badCounter = 0;
+    int goodCounter = -1;
+    int badCounter = -1;
 
     [SerializeField] Material originalMaterial;
     [SerializeField] Material badMaterial;
